@@ -13,7 +13,7 @@
     </sliver_type>
     <services>  
 	<execute command="sudo /local/install-script.sh" shell="sh"/>
-        <install install_path="/local" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowOVS/of-ovs.tar.gz"/>
+        <install install_path="/local" url="https://github.com/Naroko/Geni/blob/master/of-ovs.tar.gz"/>
      </services>
      <interface client_id="OVS:if0"><ip address="10.10.1.11" netmask="" type="ipv4"/></interface>
      <interface client_id="OVS:if1"><ip address="10.10.1.12" netmask="" type="ipv4"/></interface>
