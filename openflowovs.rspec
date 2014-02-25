@@ -20,17 +20,17 @@
      <interface client_id="OVS:if2"><ip address="10.10.1.13" netmask="" type="ipv4"/></interface>
 </node>
 <node client_id="host1" >
-    <sliver_type name="emulab-openvz"/>
+    <sliver_type name="raw-pc"/>
     <interface client_id="host1:if0">
     <ip address="10.10.1.1" netmask="255.255.255.0" type="ipv4"/></interface>
 </node>
 <node client_id="host2" >
-    <sliver_type name="emulab-openvz"/>
+    <sliver_type name="raw-pc"/>
     <interface client_id="host2:if0">
     <ip address="10.10.1.2" netmask="255.255.255.0" type="ipv4"/></interface>
 </node>
 <node client_id="host3">
-    <sliver_type name="emulab-openvz"/>
+    <sliver_type name="raw-pc"/>
     <interface client_id="host3:if0">
     <ip address="10.10.1.3" netmask="255.255.255.0" type="ipv4"/></interface>
 </node>
@@ -38,8 +38,8 @@
    <emulab:vlan_tagging enabled="true"/>
    <interface_ref client_id="OVS:if0"/>
    <interface_ref client_id="host1:if0"/>
-	<property source_id="OVS:if0" dest_id="host1:if0" capacity="100000"/>
- 	<property source_id="host1:if0" dest_id="OVS:if0" capacity="100000"/>
+	<property source_id="OVS:if0" dest_id="host1:if0" capacity="1000000"/>
+ 	<property source_id="host1:if0" dest_id="OVS:if0" capacity="1000000"/>
    <link_type name="lan"/>
 </link>
 <link client_id="lan1">
@@ -54,8 +54,8 @@
    <emulab:vlan_tagging enabled="true"/>
    <interface_ref client_id="OVS:if2"/>
    <interface_ref client_id="host3:if0"/>
-	<property source_id="OVS:if2" dest_id="host3:if0" capacity="100000"/>
-	<property source_id="host3:if0" dest_id="OVS:if2" capacity="100000"/>
+	<property source_id="OVS:if2" dest_id="host3:if0" capacity="50000"/>
+	<property source_id="host3:if0" dest_id="OVS:if2" capacity="50000"/>
   <link_type name="lan"/>
 </link>
 </rspec>
